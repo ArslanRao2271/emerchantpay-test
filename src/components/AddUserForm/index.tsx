@@ -1,6 +1,7 @@
 // libs
 import { useFormik } from "formik";
 import React from "react";
+import { Box } from "@mui/material";
 
 // src
 import addUserSchema from "./validationSchema";
@@ -9,7 +10,6 @@ import { Textfield } from "@components/TextFields";
 
 // styles
 import styles, { formStyles } from "./styles";
-import { Box } from "@mui/material";
 
 export interface UserValues {
   firstName: string;

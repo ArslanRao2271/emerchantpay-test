@@ -95,7 +95,7 @@ function LibTableComponent({
         );
       default:
         return (
-          <TableCell width={width} sx={styles.rowTextStyle}>
+          <TableCell {...props} width={width} sx={styles.rowTextStyle}>
             {label}
           </TableCell>
         );

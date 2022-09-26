@@ -8,6 +8,7 @@ import { Header } from "@components/Header";
 import { Footer } from "@components/Footer";
 import AddUser from "@pages/AddUser";
 import { PageNotFound } from "@components/404Page";
+import Users from "@pages/Users";
 
 // styles
 import styles from "./appStyles";
@@ -18,7 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<AddUser />} />
-        <Route path="/users" element={<Footer />} />
+        <Route path="/users" element={<Users />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

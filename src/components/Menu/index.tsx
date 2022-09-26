@@ -48,7 +48,7 @@ function LibMenu() {
         }}
       >
         <MenuItem onClick={() => handleClose("/")}>Add User</MenuItem>
-        <MenuItem onClick={() => handleClose("/users")}>All Users</MenuItem>
+        <MenuItem onClick={() => handleClose("/users")}>Users</MenuItem>
         <MenuItem onClick={() => handleClose("/404")}>404</MenuItem>
       </Menu>
     </Box>

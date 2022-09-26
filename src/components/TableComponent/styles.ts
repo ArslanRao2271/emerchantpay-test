@@ -13,6 +13,7 @@ const styles: Record<string, SxProps> = {
   rowTextStyle: {
     ...textStyle(400, "1rem", "1.25rem"),
     color: palette.grey.main ?? "",
+    cursor: "pointer",
   },
 
   viewDocumentCTA: {

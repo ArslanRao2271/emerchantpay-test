@@ -2,12 +2,17 @@ import { UserValues } from "@components/AddUserForm";
 
 export const parseUserData = (
   data: UserValues[],
-  onDeleteClick: (email: string) => void
+  onDeleteClick: (email: string) => void,
+  handleModalOpen?: ({ email, firstName, lastName }: UserValues) => void
 ) =>
   data.map(({ firstName, lastName, email }) => ({
     id: email,
     rowData: [
-      { label: email, width: "40%" },
+      {
+        label: email,
+        width: "40%",
+        onClick: () => handleModalOpen({ email, firstName, lastName }),
+      },
       { label: firstName, width: "20%" },
       { label: lastName, width: "20%" },
       {
@@ -21,7 +26,6 @@ export const parseUserData = (
             onClick: () => onDeleteClick(email),
           },
         ],
-        width: "20%",
       },
     ],
   }));
