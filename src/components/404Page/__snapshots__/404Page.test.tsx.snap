@@ -18,17 +18,3 @@ exports[`404 Page test cases Should match previous snapshot 1`] = `
   </div>
 </DocumentFragment>
 `;
-
-exports[`Button test cases Should match previous snapshot 1`] = `
-<DocumentFragment>
-  <div
-    class="MuiBox-root css-7jugx5"
-  >
-    <h2
-      class="MuiTypography-root MuiTypography-h2 css-1sra7t5-MuiTypography-root"
-    >
-      Page not found!
-    </h2>
-  </div>
-</DocumentFragment>
-`;
