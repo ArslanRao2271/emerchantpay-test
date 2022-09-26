@@ -2,7 +2,7 @@ import { UserValues } from "@components/AddUserForm";
 
 export const parseUserData = (
   data: UserValues[],
-  onDeleteClick: (email: string) => void,
+  onDeleteClick?: (email: string) => void,
   handleModalOpen?: ({ email, firstName, lastName }: UserValues) => void
 ) =>
   data.map(({ firstName, lastName, email }) => ({

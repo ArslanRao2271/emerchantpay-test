@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableComponent test cases Should match previous snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-7822g1"
+  >
+    <div
+      class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+    >
+      <table
+        class="MuiTable-root css-rqglhn-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+          />
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

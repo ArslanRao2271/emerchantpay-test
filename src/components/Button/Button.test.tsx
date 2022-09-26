@@ -93,6 +93,16 @@ const START_ICON = [
 ];
 
 describe("Button test cases", () => {
+  test("Should match previous snapshot", () => {
+    const { asFragment } = render(
+      <Button variant="primary" color="primary" theme="light">
+        Hello
+      </Button>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   test("test if Button is in document", () => {
     render(
       <Button variant="primary" color="primary" theme="light">

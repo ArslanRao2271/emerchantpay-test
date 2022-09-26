@@ -9,7 +9,7 @@ import styles from "./styles";
 
 export interface LibModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose?: () => void;
   content: JSX.Element;
 }
 

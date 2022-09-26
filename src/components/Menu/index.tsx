@@ -35,6 +35,7 @@ function LibMenu() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        data-testid="menu"
       >
         <MenuIcon />
       </IconButton>

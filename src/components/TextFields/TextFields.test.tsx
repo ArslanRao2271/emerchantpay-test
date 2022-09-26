@@ -1,8 +1,9 @@
-import { screen, render, fireEvent } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import InfoIcon from "@mui/icons-material/Info";
 import { Textfield } from "./index";
 import React from "react";
 import { lightTheme } from "@theme/index";
+import userEvent from "@testing-library/user-event";
 
 const { palette } = lightTheme;
 
@@ -13,6 +14,14 @@ const PROPS = {
 };
 
 describe("Unit Test cases for TextFields", () => {
+  test("Should match previous snapshot", () => {
+    const { asFragment } = render(
+      <Textfield {...PROPS} type="text" value="inputVal" />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   test("should render textfield with passed value prop", () => {
     render(<Textfield {...PROPS} type="text" value="inputVal" />);
 
@@ -45,7 +54,7 @@ describe("Unit Test cases for TextFields", () => {
     let inputType = InputBox?.getAttribute("type");
 
     expect(inputType).toBe("password");
-    fireEvent.click(button);
+    userEvent.click(button);
     inputType = InputBox?.getAttribute("type");
     expect(inputType).toBe("text");
   });
