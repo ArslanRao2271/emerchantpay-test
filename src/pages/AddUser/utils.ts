@@ -8,8 +8,8 @@ export const parseUserData = (
     id: email,
     rowData: [
       { label: email, width: "40%" },
-      { label: firstName },
-      { label: lastName },
+      { label: firstName, width: "20%" },
+      { label: lastName, width: "20%" },
       {
         label: "",
         type: "action-buttons",
@@ -21,6 +21,7 @@ export const parseUserData = (
             onClick: () => onDeleteClick(email),
           },
         ],
+        width: "20%",
       },
     ],
   }));

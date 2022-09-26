@@ -2,12 +2,14 @@
 import React from "react";
 import { Box, IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 // src
 
 // styles
 
 function LibMenu() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -15,8 +17,9 @@ function LibMenu() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (route: string) => {
     setAnchorEl(null);
+    navigate(route);
   };
 
   return (
@@ -44,9 +47,9 @@ function LibMenu() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={() => handleClose("/")}>Add User</MenuItem>
+        <MenuItem onClick={() => handleClose("/users")}>All Users</MenuItem>
+        <MenuItem onClick={() => handleClose("/404")}>404</MenuItem>
       </Menu>
     </Box>
   );

@@ -13,6 +13,7 @@ const styles: Record<string, SxProps> = {
     backgroundColor: palette.primary.main,
     position: "fixed",
     bottom: 0,
+    top: "auto",
   },
 };
 

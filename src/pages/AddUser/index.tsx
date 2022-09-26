@@ -24,12 +24,15 @@ const headerData = [
   },
   {
     label: "First Name",
+    width: "20%",
   },
   {
     label: "Last Name",
+    width: "20%",
   },
   {
     label: "Action",
+    width: "20%",
   },
 ];
 
