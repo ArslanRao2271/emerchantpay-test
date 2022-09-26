@@ -1,5 +1,5 @@
 // libs
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 // src
@@ -20,12 +20,16 @@ const alertInitialValues: LibAlertProps = {
 const headerData = [
   {
     label: "Email",
+    width: "40%",
   },
   {
     label: "First Name",
   },
   {
     label: "Last Name",
+  },
+  {
+    label: "Action",
   },
 ];
 
@@ -52,12 +56,17 @@ function AddUser() {
     });
   };
 
+  const handleDelete = (val: string) => {
+    setRowsData((prevState) => prevState.filter(({ email }) => email !== val));
+  };
+
   return (
     <Box sx={styles.addUserPageContainer} width="100%">
+      <Typography variant="h3">Add User</Typography>
       <AddUserForm getUserData={handleAddUser} />
       <TableComponent
         headerData={headerData}
-        rowsData={parseUserData(rowsData)}
+        rowsData={parseUserData(rowsData, (email) => handleDelete(email))}
       />
       <Alert
         {...alert}
