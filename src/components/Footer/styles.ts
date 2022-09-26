@@ -9,8 +9,10 @@ const styles: Record<string, SxProps> = {
     textAlign: "center",
   },
 
-  appBar: {
+  footerBar: {
     backgroundColor: palette.primary.main,
+    position: "fixed",
+    bottom: 0,
   },
 };
 

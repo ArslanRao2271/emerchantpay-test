@@ -9,8 +9,8 @@ import styles from "./styles";
 
 function LibFooter() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={styles.appBar} position="static">
+    <Box width="100%" sx={{ flexGrow: 1 }}>
+      <AppBar sx={styles.footerBar} position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={styles.labelStyle}>
             E-MerchantPay

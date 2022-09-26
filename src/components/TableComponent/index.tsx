@@ -103,34 +103,36 @@ function LibTableComponent({
   };
 
   return (
-    <TableContainer>
-      <Table>
-        <TableHead>
-          <TableRow>
-            {headerData.map(({ label, width }) => (
-              <TableCell
-                key={label}
-                sx={styles.headerCellText}
-                align={align}
-                width={width}
-              >
-                {label}
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rowsData.map(({ id, rowData }) => (
-            <TableRow
-              key={id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              {rowData.map((row) => getComponent(row))}
+    <Box width="90%">
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              {headerData.map(({ label, width }) => (
+                <TableCell
+                  key={label}
+                  sx={styles.headerCellText}
+                  align={align}
+                  width={width}
+                >
+                  {label}
+                </TableCell>
+              ))}
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rowsData.map(({ id, rowData }) => (
+              <TableRow
+                key={id}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                {rowData.map((row) => getComponent(row))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
   );
 }
 

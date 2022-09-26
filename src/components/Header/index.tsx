@@ -10,7 +10,7 @@ import styles from "./styles";
 
 function LibHeader() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box width="100%" sx={{ flexGrow: 1 }}>
       <AppBar sx={styles.appBar} position="static">
         <Toolbar>
           <Typography variant="h6" sx={styles.labelStyle}>

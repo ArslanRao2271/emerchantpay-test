@@ -1,39 +1,8 @@
 import { SxProps } from "@mui/material";
 import { lightTheme } from "@theme/index";
+import { boxDisplay, textStyle } from "../../appStyles";
 
 const { palette } = lightTheme;
-
-export interface ResponsiveProps {
-  xl?: string;
-  lg?: string;
-  xs?: string;
-  ss?: string;
-  sm?: string;
-  md?: string;
-  mm?: string;
-  ml?: string;
-}
-
-const boxDisplay = (
-  display: string,
-  justifyContent?: string,
-  alignItems?: string
-) => ({
-  display,
-  justifyContent,
-  alignItems,
-});
-
-const textStyle = (
-  fontWeight: number,
-  fontSize: string | ResponsiveProps,
-  lineHeight: string | ResponsiveProps
-) => ({
-  fontWeight,
-  fontSize,
-  lineHeight,
-  whiteSpace: "pre-wrap",
-});
 
 const styles: Record<string, SxProps> = {
   headerCellText: {
