@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "include": ["**/*.ts", "**/*.tsx", "setupTests.js"],
+  "exclude": [
+    "node_modules",
+    "build/*",
+    "dist/*",
+    "coverage/*",
+    "*.js",
+    "*.json",
+    "__mocks__/*",
+    "storybook-static/*",
+    "src/**/*.stories.tsx"
+  ]
+  //default configs...
+} 
